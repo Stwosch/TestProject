@@ -1,0 +1,43 @@
+:host {
+    box-sizing: border-box;
+    background-color: #EEE;
+    margin: 0 2rem;
+    padding: 2rem 1rem 1.5rem 1rem;
+    height: 85%;
+    width: 14rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-photo {
+    display: block;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 100%;
+}
+
+.user-activity-type {
+    position: relative;
+    font-family: 'AurulentSans-Regular', 'sans-serif';
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    color: #818B98;
+    border-top: 2px solid #818B98;
+    padding-top: 1rem;
+    width: 100%;
+    text-align: center;
+}
+
+.user-activity-type::after {
+    content: '';
+    display: block;
+    position: absolute;
+    transform: translate(50%, 5px);
+    right: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color:#818B98;
+    border-radius: 100%;
+}

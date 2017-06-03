@@ -1,0 +1,35 @@
+:host {
+    flex: 3;
+    text-align: center;
+    margin-top: 4rem;
+    font-family: 'AurulentSans-Italic', 'sans-serif';
+    font-size: 1.6rem;
+    background-color: #fff;
+}
+
+.votes-number {
+    margin-right: 1rem;
+    font-weight: bold;
+    font-family: 'AurulentSans-Regular', 'sans-serif';
+    font-size: 2rem;
+}
+
+.up-vote {
+    display: inline-block;
+    width: 0; 
+    height: 0; 
+    border-left: 1rem solid transparent;
+    border-right: 1rem solid transparent;
+    border-bottom: 1.5rem solid #0266B3;
+    transform: translate(2.4rem, -2rem);
+}
+
+.down-vote {
+    display: inline-block;
+    width: 0; 
+    height: 0; 
+    border-left: 1rem solid transparent;
+    border-right: 1rem solid transparent;
+    border-top: 1.5rem solid #0266B3;
+    transform: translateY(2rem);
+}

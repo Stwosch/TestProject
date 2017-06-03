@@ -1,0 +1,203 @@
+:host {
+    display: block;
+    width: 120rem;
+    position: relative;
+    background-color: #fff;
+    margin: 0 auto;
+    border: 1px solid #000;
+    text-align: center;
+    font-size: 1.4rem;
+    font-family: 'AurulentSans-Regular', 'sans-serif';
+    padding: 2rem 0;
+}
+
+.user-photo {
+    display: block;
+    width: 7rem;
+    height: 7rem;
+    margin: 0 auto;
+    border-radius: 100%;
+}
+
+.user-name {
+    font-family: 'AurulentSans-Bold', 'sans-serif';
+    color: #0266B3;
+    font-size: 2.4rem;
+}
+
+.user-info {
+    padding: 2rem 0 3rem 0;
+    margin: 0 auto;
+    width: 60%;
+    border-bottom: 2px solid #A7A9AC;
+    display: flex;
+    justify-content: space-between;
+}
+
+.user-activity-label {
+    color: #818B98;
+    font-family: 'AurulentSans-Regular', 'sans-serif';
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    margin-right: 1rem;
+}
+
+.activity-level-badge {
+    display: inline-block;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 100%;
+    background-color: #CFD1D3;
+}
+
+.activity-level-badge.active {
+     background-color: #FA8B81;
+}
+
+.user-acitivity-search {
+    margin: 2rem auto 4rem auto;
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+}
+
+.arrow {
+    color: #fff;
+    font-size: 3rem;
+    width: 4rem;
+    height: 4rem;
+    line-height: 3.5rem;
+    background-color: #818B98;
+    border-radius: 100%;
+}
+
+.arrow.active {
+    background-color: #0266B9;
+}
+
+.user-activity-search-label {
+    font-size: 3rem;
+    font-family: 'AurulentSans-BoldItalic', 'sans-serif';
+    word-spacing: 0.5rem;
+}
+
+.user-statistics  {
+    display: flex;
+    width: 60%;
+    margin: 5rem auto;
+    justify-content: space-around;
+}
+
+.user-statistic {
+    position: relative;
+    display: flex;
+    font-family: 'AurulentSans-Italic', 'sans-serif';
+    font-size: 1.8rem;
+    width: 12rem;
+    height: 12rem;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #E5F5FD;
+}
+
+.user-statistic:nth-child(1) {
+    transform: rotate(240deg);
+}
+
+.user-statistic-content-1 {
+    transform: rotate(-240deg);
+}
+
+.user-statistic:nth-child(2) {
+    transform: rotate(170deg);
+}
+
+.user-statistic-content-2 {
+    transform: rotate(-170deg);
+}
+
+.user-statistic:nth-child(3) {
+    transform: rotate(250deg);
+}
+
+.user-statistic-content-3 {
+    transform: rotate(-250deg);
+}
+
+.user-statistic:nth-child(4) {
+    transform: rotate(10deg);
+}
+
+.user-statistic-content-4 {
+    transform: rotate(-10deg);
+}
+
+.statistic-number {
+    font-size: 2rem;
+    font-family: 'AurulentSans-Bold', 'sans-serif';
+}
+
+.users-related {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem auto 4rem auto;
+    width: 30%;
+}
+
+.users-photo-block {
+    width: 10rem;
+    height: 10rem;
+    background-image: url("/assets/vintage-leaves.png");
+    margin: 0 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.users-related-name {
+    margin-top: 0.5rem;
+    font-family: 'AurulentSans-Bold', 'sans-serif';
+    color: #0266B3;
+    font-size: 1.8rem;
+}
+
+.selected-discussion {
+    width: 100%;
+    background-image: url("/assets/vintage-leaves.png");
+    margin-top: 5rem;
+}
+
+.question-title {
+    font-family: 'AurulentSans-BoldItalic', 'sans-serif';
+    color: #0266B3;
+    font-size: 2.4rem;
+    margin: 2rem 0;
+}
+
+.selected-discussion-info {
+    display: flex;
+}
+
+.selected-discussion-photo {
+    transform: translateY(-3rem);
+}
+
+.selected-discussion-statistics {
+    display: flex;
+    width: 60%;
+    margin: 0 auto;
+    justify-content: space-around;
+    padding: 2rem 0;
+    font-family: 'AurulentSans-Italic', 'sans-serif';
+    font-size: 1.8rem;
+}
+
+.close {
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    color: #A7A9AC;
+    cursor: pointer;
+    font-size: 2.5rem;
+}

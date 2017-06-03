@@ -1,0 +1,23 @@
+form {
+    display: flex;
+}
+
+input[type="text"] {
+    flex: 5;
+    margin-right: 2rem;
+    background-color: #FBFBFB;
+    border: 1px solid #EEE;
+    padding: 1.5rem;
+    font-family: 'AurulentSans-Regular';
+}
+
+input[type="submit"] {
+    flex: 1;
+    border: 2px solid #A7A9AC;
+    text-transform: uppercase;
+    font-family: 'AurulentSans-Bold';
+    color: #A7A9AC;
+    background-color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}

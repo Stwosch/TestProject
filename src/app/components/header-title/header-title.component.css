@@ -1,0 +1,19 @@
+h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-family: 'AurulentSans-Bold', 'sans-serif';
+    margin: 0;
+}
+
+.plus {
+    text-align: center;
+    margin-left: 1rem;
+    display: inline-block;
+    background-color: #0266B3;
+    color: #fff;
+    border-radius: 100%;
+    width: 3rem;
+    line-height: 0.7;
+    height: 3rem;
+    font-size: 3.3rem;
+}

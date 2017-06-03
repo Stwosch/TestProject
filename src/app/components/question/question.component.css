@@ -1,0 +1,127 @@
+:host {
+    display: block;
+    box-sizing: border-box;
+    min-height: 50rem;
+    padding-bottom: 7rem;
+    max-width: 120rem;
+    border-bottom: 1px solid #E6E6E6;
+    box-shadow: 3px 0 5px 0 rgba(0,0,0,0.15);
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.label {
+    box-sizing: border-box;
+    display: flex;
+    padding: 2rem;
+    background-color: #DFF3FD;
+    width: 90rem;
+}
+
+.user-photo {
+    display: block;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 100%;
+    margin-right: 5rem;
+}
+
+.user-name {
+    font-family: 'AurulentSans-Bold', 'sans-serif';
+    color: #0266B3;
+    font-size: 2.4rem;
+}
+
+.user-action {
+    color: #818B98;
+    font-family: 'AurulentSans-Regular', 'sans-serif';
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    margin-left: 1rem;
+}
+
+.question-title {
+    font-family: 'AurulentSans-BoldItalic', 'sans-serif';
+    color: #0266B3;
+    font-size: 2rem;
+}
+
+.question-activities {
+    width: 120rem;
+    height: 30rem;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.question-activities-users {
+    height: 30rem;
+    width: 75%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-end;
+}
+
+.question-activities-action {
+    background-color: #DFF3FD;
+    height: 100%;
+    width: 14rem;
+    display: flex;
+}
+
+.question-activities-action-type {
+    align-self: flex-end;
+    margin: 0 1rem 1.5rem 1rem;
+    position: relative;
+    font-family: 'AurulentSans-Regular', 'sans-serif';
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    color: #818B98;
+    border-top: 2px solid #818B98;
+    padding-top: 1rem;
+    width: 100%;
+    text-align: center;
+}
+
+.question-activities-action-type::after, .question-activities-more-label::after {
+    content: '';
+    display: block;
+    position: absolute;
+    transform: translate(50%, 5px);
+    right: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color:#818B98;
+    border-radius: 100%;
+}
+
+.question-activities-more {
+    margin: 0 2rem;
+    box-sizing: border-box;
+    height: 85%;
+    width: 14rem;
+    font-family: 'AurulentSans-BoldItalic', 'sans-serif';
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 1rem 1.5rem 1rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.question-activities-more-label {
+    position: relative;
+}
+
+.question-activities-info {
+    height: 85%;
+    align-self: flex-end;
+    box-sizing: border-box;
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    font-family: 'AurulentSans-BoldItalic', 'sans-serif';
+    font-size: 2rem;
+    text-align: center;
+}

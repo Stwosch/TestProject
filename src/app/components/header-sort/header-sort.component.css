@@ -1,0 +1,60 @@
+:host {
+    font-family: 'AurulentSans-Italic', 'sans-serif';
+    font-size: 1.4rem;
+    display: block;
+    align-self: flex-end;
+}
+
+input[type="radio"] {
+    display:none;
+}
+
+input[type="radio"] + label {
+    margin-right: 2rem;
+}
+
+input[type="radio"] + label, a {
+    font-family: 'AurulentSans-Regular', 'sans-serif';
+}
+
+input[type="radio"] + label span {
+    display: inline-block;
+    position: relative;
+    width: 1.4rem;
+    height: 1.4rem;
+    margin-right: 3px;
+    vertical-align: middle;
+    background-color: #FBFBFB;
+    cursor: pointer;
+    border: 1px solid #A7A9AC;
+    border-radius: 100%;
+}
+
+input[type="radio"]:checked + label span::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 0.9rem;
+    height: 0.9rem;
+    background-color: #000;
+    border-radius: 100%;
+}
+
+.active-sort {
+    color: #A7A9AC;
+    text-decoration: underline;
+}
+
+a {
+    color: #026EB3;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+.sort {
+    display: inline-block;
+    margin-left: 3rem;
+}
