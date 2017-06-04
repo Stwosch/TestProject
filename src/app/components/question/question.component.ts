@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Question } from "../../domain-model-classes/custom.classes";
 
 @Component({
   selector: 'app-question',
@@ -6,6 +7,10 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./question.component.css']
 })
 export class QuestionComponent implements OnInit {
+  
+  @Input() question: Question;
+
+  //dodac bindowanie tiles i skalowanie ich, narazie bez responsive
 
   constructor() { }
 

@@ -1,0 +1,12 @@
+<div class="container">
+    <header>
+        <app-header>
+            <app-header-sort></app-header-sort>
+            <app-header-search></app-header-search>
+        </app-header>
+    </header>
+    <main>
+        <app-question *ngFor="let question of allQuestionsBaseData" [question]="question"></app-question>
+        <div class="load-more-questions">load more questions</div>
+    </main>
+</div>
