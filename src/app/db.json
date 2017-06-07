@@ -68,6 +68,22 @@
       "votes": -3,
       "usersId": 3,
       "questionId": 1
+    },
+    {
+      "id": 3,
+      "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore",
+      "date": "2017-06-01",
+      "votes": -9,
+      "usersId": 1,
+      "questionId": 2
+    },
+    {
+      "id": 4,
+      "description": "dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecate",
+      "date": "2017-06-01",
+      "votes": 22,
+      "usersId": 4,
+      "questionId": 3
     }
   ],
   "comments": [
@@ -88,6 +104,15 @@
       "usersId": 3,
       "answersId": 1,
       "questionId": 1
+    },
+    {
+      "id": 3,
+      "description": "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure",
+      "date": "2017-06-03",
+      "votes": 3,
+      "usersId": 5,
+      "answersId": 3,
+      "questionId": 2
     }
   ]
 }

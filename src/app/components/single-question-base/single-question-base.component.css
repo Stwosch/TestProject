@@ -1,0 +1,36 @@
+.container {
+    background-color: #FFE1AD;
+    padding-bottom: 5rem;
+}
+
+main {
+    background-color: #FBFBFB;
+    width: 95%;
+    padding-top: 28rem;
+    margin: 0 auto;
+}
+
+.question-activity-time {
+    font-size: 1.6rem;
+    font-family: 'AurulentSans-Italic', 'sans-serif';
+    margin: 0;
+    align-self: flex-end;
+}
+
+.question-activity-time-number {
+    margin: 0 1rem;
+    font-weight: bold;
+}
+
+.topic-answers {
+    width: 120rem;
+    margin: 0 auto;
+    padding: 10rem 0 5rem 0;
+}
+
+.topic-answers-heading {
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'AurulentSans-Italic', 'sans-serif';
+    margin-bottom: 2rem;
+}

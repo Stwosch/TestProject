@@ -8,6 +8,7 @@
     box-shadow: 3px 0 5px 0 rgba(0,0,0,0.15);
     margin: 0 auto;
     background-color: #fff;
+    cursor: pointer;
 }
 
 .label {

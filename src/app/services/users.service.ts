@@ -29,4 +29,17 @@ export class UsersService {
       .toPromise();
   }
 
+  getUserById(id) {
+    
+    const url = "http://localhost:3000/users/" + id;
+
+    return this.http.get(url)
+      .map((response: Response) => {
+        
+        const data = response.json();
+        return new User(data.id, data.name, data.photo);
+      })
+      .toPromise();
+  }
+
 }

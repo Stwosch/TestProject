@@ -3,11 +3,14 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+import { routerModule } from './app.routing';
+
 import { QuestionsService } from './services/questions.service';
 import { UsersService } from './services/users.service';
 import { AnswersService } from './services/answers.service';
 import { CommentsService } from './services/comments.service';
 import { AllQuestionsBaseService } from './services/all-questions-base.service';
+import { SingleQuestionBaseService } from './services/single-question-base.service';
 
 import { AppComponent } from './app.component';
 import { QuestionComponent } from './components/question/question.component';
@@ -21,6 +24,8 @@ import { TopicCommentComponent } from './components/topic-comment/topic-comment.
 import { TopicVotesComponent } from './components/topic-votes/topic-votes.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { AllQuestionsBaseComponent } from './components/all-questions-base/all-questions-base.component';
+import { SingleQuestionBaseComponent } from './components/single-question-base/single-question-base.component';
+import { TopicAnswerComponent } from './components/topic-answer/topic-answer.component';
 
 @NgModule({
   declarations: [
@@ -35,19 +40,23 @@ import { AllQuestionsBaseComponent } from './components/all-questions-base/all-q
     TopicCommentComponent,
     TopicVotesComponent,
     ProfileComponent,
-    AllQuestionsBaseComponent
+    AllQuestionsBaseComponent,
+    SingleQuestionBaseComponent,
+    TopicAnswerComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    routerModule
   ],
   providers: [
     QuestionsService,
     UsersService,
     AnswersService,
     CommentsService,
-    AllQuestionsBaseService
+    AllQuestionsBaseService,
+    SingleQuestionBaseService
   ],
   bootstrap: [AppComponent]
 })

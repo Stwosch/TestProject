@@ -21,15 +21,3 @@ main {
     font-family: 'AurulentSans-Regular', 'sans-serif';
     box-shadow: 3px 0 5px 0 rgba(0,0,0,0.15);
 }
-
-.question-activity-time {
-    font-size: 1.6rem;
-    font-family: 'AurulentSans-Italic', 'sans-serif';
-    margin: 0;
-    align-self: flex-end;
-}
-
-.question-activity-time-number {
-    margin: 0 1rem;
-    font-weight: bold;
-}

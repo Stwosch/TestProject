@@ -1,0 +1,18 @@
+<div class="container" *ngIf="question && answers">
+    <header>
+        <app-header>
+            <p class="question-activity-time" *ngIf="lastDay !== -1 && lastDay !== undefined">
+                Last time
+                <span class="question-activity-time-number">{{ lastDay }}</span>
+                <span *ngIf="lastDay > 0">days ago</span>
+            </p>
+        </app-header>
+    </header>
+    <main>
+       <app-topic [question]="question"></app-topic>
+       <div class="topic-answers">
+          <div class="topic-answers-heading">{{ peersAnswers }} peer<span *ngIf="peersAnswers > 1">s</span> already answered</div>
+          <app-topic-answer *ngFor="let answer of answers" [answer]="answer"></app-topic-answer>
+       </div>
+    </main>
+</div>

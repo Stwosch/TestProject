@@ -11,13 +11,11 @@
         <div class="question-activities-action">
             <div class="question-activities-action-type">asked</div>
         </div>
-        <div class="question-activities-more">
-            <span>6</span>
+        <div class="question-activities-more" *ngIf="showMore">
+            <span>{{ question.activities.length - tilesSize }}</span>
             <span class="question-activities-more-label">more activities</span>
         </div>
-        <app-question-activity></app-question-activity>
-        <app-question-activity></app-question-activity>
-        <app-question-activity></app-question-activity>
+        <app-question-activity *ngFor="let tile of tiles" [tile]="tile"></app-question-activity> 
     </div>
     <div class="question-activities-info">
         <div>{{ question.relatedDiscussion }} related discussion</div>

@@ -1,8 +1,9 @@
-<img src="assets/photo-1.jpg" alt="User" class="user-photo">
+<button type="button" class="btn-lg">CONTINUE discussion</button>
+<img src="assets/{{ (user | async)?.photo }}" alt="User" class="user-photo" *ngIf="user | async">
 <div class="comment">
-  <strong class="user-name">Patricia</strong>
+  <strong class="user-name">{{ (user | async)?.name }}</strong>
   <span class="user-action"> commented it:</span>
-  <span class="comment-time">yesterday</span>
-  <p class="comment-content">Numbers or tingling in your feet should be reported to your doctor at your regular visits.</p>
+  <span class="comment-time">{{ date }}</span>
+  <p class="comment-content">{{ comment.description }}</p>
 </div>
-<app-topic-votes></app-topic-votes>
+<app-topic-votes [votes]="comment.votes" ></app-topic-votes>

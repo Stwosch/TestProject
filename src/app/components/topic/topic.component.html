@@ -1,15 +1,15 @@
 <div class="label">
-  <img src="assets/photo-1.jpg" alt="User" class="user-photo">
+  <img src="assets/{{ ( user | async )?.photo }}" alt="User" class="user-photo" *ngIf="user | async">
   <div class="topic-title">
-    <strong class="user-name">Eva</strong>
+    <strong class="user-name">{{ ( user | async )?.name }}</strong>
     <span class="user-action"> is asking:</span>
-    <h2 class="question-title">Will insulin make my patient gain weight?</h2>
+    <h2 class="question-title">{{ question.title }}</h2>
   </div>
-  <div class="follow">unfollow</div>
+  <div class="follow">{{ follow }}</div>
 </div>
 <div class="topic-content">
   <div class="placeholder"></div>
-  <p class="topic-description">All my patients with diabetes should see and opthalmologist yearly for a dialated eye examination- begining at diagnosis inpeople with type 2 diabetes, and after 5 years in people with type 1 diabetes after puberty. Patients with know eye disease, symptoms of blurred vision in one eye, or blind spots may need to see their opthalmologist more frequently.</p>
-  <app-topic-votes></app-topic-votes>
+  <p class="topic-description">{{ question.description }}</p>
+  <app-topic-votes [votes]="question.votes"></app-topic-votes>
 </div>
-<button type="button" class="give-answer">GIVE new answer</button>
+<button type="button" class="btn-lg">GIVE new answer</button>

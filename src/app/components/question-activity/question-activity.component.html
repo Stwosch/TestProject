@@ -1,2 +1,2 @@
-<img src="assets/photo-1.jpg" alt="User" class="user-photo">
-<div class="user-activity-type">commented</div>
+<img src="assets/{{ (user | async)?.photo }}" alt="User" class="user-photo" *ngIf="user | async">
+<div class="user-activity-type {{ actionTypeClass }}">{{ actionType }}</div>

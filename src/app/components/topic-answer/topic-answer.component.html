@@ -1,0 +1,12 @@
+<button type="button" class="btn-lg" *ngIf="!hideBtn">answer</button>
+<div class="answer">
+    <img src="assets/{{ ( user | async )?.photo }}" alt="User" class="user-photo" *ngIf="user | async">
+    <div class="comment">
+      <strong class="user-name">{{ (user | async)?.name }}</strong>
+      <span class="user-action"> commented it:</span>
+      <span class="comment-time">{{ date }}</span>
+      <p class="comment-content">{{ answer.description }}</p>
+    </div>
+    <app-topic-votes [votes]="answer.votes"></app-topic-votes>
+</div>
+<app-topic-comment *ngFor="let comment of comments | async" [comment]="comment" (commentCreated)="hideDefaultBtn($event)"></app-topic-comment>

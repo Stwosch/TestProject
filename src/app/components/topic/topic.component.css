@@ -48,6 +48,7 @@
     font-size: 2rem;
     align-self: center;
     flex: 1;
+    cursor: pointer;
 }
 
 .topic-title {
@@ -56,6 +57,7 @@
 
 .topic-content {
     display: flex;
+    background-color: #fff;
 }
 
 .placeholder {
@@ -72,7 +74,7 @@
     line-height: 2.5rem;
 }
 
-.give-answer {
+.btn-lg {
     position: absolute;
     text-align: center;
     padding: 1rem 3rem;

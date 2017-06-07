@@ -1,4 +1,4 @@
-<span class="votes-number">19</span>
-upvotes
-<span class="up-vote"></span>
-<span class="down-vote"></span>
+<span class="votes-number">{{ votesNumber }}</span>
+{{ votesText }}
+<span class="up-vote" (click)="upVote()"></span>
+<span class="down-vote" (click)="downVote()"></span>

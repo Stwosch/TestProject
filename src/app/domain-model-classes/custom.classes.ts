@@ -93,3 +93,25 @@ export class AllQuestionsBase {
         this.activities = activities;
     }
 }
+
+export class SingleQuestionBase {
+    id: number;
+    title: string;
+    description: string;
+    votes: number;
+    follow: boolean;
+    usersId: number;
+    answers: Answer[];
+    comments: Comment[];
+
+    constructor(id, title, description, votes, follow, usersId, answers, comments) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.votes = votes;
+        this.follow = follow;
+        this.usersId = usersId;
+        this.answers = answers;
+        this.comments = comments;
+    }
+}

@@ -31,4 +31,19 @@ export class QuestionsService {
 
   }
 
+  getQuestionById(id: number): Promise<Question> {
+
+    const url: string = 'http://localhost:3000/questions/' + id;
+
+    return this.http.get(url)
+      .map((response: Response) => {
+          
+        const data = response.json();
+
+        return new Question(data.id, data.title, data.description, data.votes, data.follow, data.usersId);
+      })
+      .toPromise();
+
+  }
+
 }

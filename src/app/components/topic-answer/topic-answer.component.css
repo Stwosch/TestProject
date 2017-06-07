@@ -1,6 +1,14 @@
 :host {
     display: flex;
-    width: 90.8%;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-bottom: 10rem;
+    position: relative;
+}
+
+.answer {
+    display: flex;
+    width: 120rem;
     background-color: #fff;
     box-shadow: 3px 0 5px 0 rgba(0,0,0,0.15);
 }
@@ -69,4 +77,5 @@
     left: 50%;
     bottom: -2.5rem;
     transform: translateX(-50%);
+    text-transform: uppercase;
 }
