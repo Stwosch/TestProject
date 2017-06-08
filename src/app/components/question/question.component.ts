@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { AllQuestionsBase } from "../../domain-model-classes/custom.classes";
 
 @Component({
@@ -8,18 +8,17 @@ import { AllQuestionsBase } from "../../domain-model-classes/custom.classes";
 })
 export class QuestionComponent implements OnInit {
   
-  @Input() question: AllQuestionsBase;
-
-  private showMore: boolean;
-  private tilesSize;
-  private tiles;
-
-  //dodac bindowanie tiles i skalowanie ich, narazie bez responsive
-
   constructor() { 
 
     this.tilesSize = 3;
   }
+
+  @Input() question: AllQuestionsBase;
+  @Output() loadMoreQuestionsBtn = new EventEmitter();
+
+  private showMore: boolean;
+  private tilesSize;
+  private tiles;
 
   private generateActivities() {
 
@@ -33,8 +32,8 @@ export class QuestionComponent implements OnInit {
   }
 
   ngOnInit() {
-
     this.tiles = this.generateActivities();
+    this.loadMoreQuestionsBtn.emit();
   }
 
 }

@@ -29,27 +29,57 @@
     { 
       "id": 1, 
       "name": "Eva", 
-      "photo": "photo-1.jpg"
+      "photo": "photo-1.jpg",
+      "member": 5,
+      "peers": 48,
+      "lastTimeOnline": "Saturday afternoon",
+      "findings": 19,
+      "activityLevel": 2,
+      "discussions": 19
     },
     { 
       "id": 2, 
       "name": "Andrew", 
-      "photo": "photo-4.jpg"
+      "photo": "photo-4.jpg",
+      "member": 5,
+      "peers": 32,
+      "lastTimeOnline": "Yesterday morning",
+      "findings": 20,
+      "activityLevel": 1,
+      "discussions": 2
     },
     { 
       "id": 3, 
       "name": "Joseph", 
-      "photo": "photo-2.jpg"
+      "photo": "photo-2.jpg",
+      "member": 5,
+      "peers": 20,
+      "lastTimeOnline": "Today afternoon",
+      "findings": 36,
+      "activityLevel": 0,
+      "discussions": 8
     },
     { 
       "id": 4, 
       "name": "Patricia", 
-      "photo": "photo-3.jpg"
+      "photo": "photo-3.jpg",
+      "member": 4,
+      "peers": 18,
+      "lastTimeOnline": "Today morning",
+      "findings": 38,
+      "activityLevel": 3,
+      "discussions": 30
     },
     {
       "id": 5,
       "name": "David",
-      "photo": "photo-5.jpg"
+      "photo": "photo-5.jpg",
+      "member": 4,
+      "peers": 17,
+      "lastTimeOnline": "Monday morning",
+      "findings": 5,
+      "activityLevel": 2,
+      "discussions": 4
     }
   ],
   "answers": [

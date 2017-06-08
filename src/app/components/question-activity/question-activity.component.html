@@ -1,2 +1,2 @@
-<img src="assets/{{ (user | async)?.photo }}" alt="User" class="user-photo" *ngIf="user | async">
+<app-user-photo [user]="{id: (user | async)?.id, photo: (user | async)?.photo}" *ngIf="user | async"></app-user-photo>
 <div class="user-activity-type {{ actionTypeClass }}">{{ actionType }}</div>

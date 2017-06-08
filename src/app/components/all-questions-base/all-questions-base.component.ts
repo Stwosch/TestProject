@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { AllQuestionsBaseService } from '../../services/all-questions-base.service';
 import { AllQuestionsBase } from '../../domain-model-classes/custom.classes';
 
@@ -9,14 +9,20 @@ import { AllQuestionsBase } from '../../domain-model-classes/custom.classes';
 })
 export class AllQuestionsBaseComponent implements OnInit {
 
-  private start: number;
-  private increases: number;
-  private allQuestionsBaseData: AllQuestionsBase[];
-
   constructor(private allQuestionBaseService: AllQuestionsBaseService) { 
 
     this.start = 0;
     this.increases = 3;
+    this.hideLoadMoreQuestionsBtn = true;
+  }
+
+  private start: number;
+  private increases: number;
+  private allQuestionsBaseData: AllQuestionsBase[];
+  private hideLoadMoreQuestionsBtn: boolean;
+
+  private showLoadMoreQuestionsBtn() {
+    this.hideLoadMoreQuestionsBtn = false;
   }
 
   ngOnInit() {

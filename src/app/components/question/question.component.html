@@ -1,7 +1,7 @@
 <div class="label">
-    <img src="assets/{{ question.userPhoto }}" alt="User" class="user-photo">
-    <div>
-        <strong class="user-name">{{ question.userName }}</strong>
+    <app-user-photo [user]="{id: question.userId, photo: question.userPhoto}"></app-user-photo>
+    <div class="question-description">
+        <app-user-name [user]="{id: question.userId, name: question.userName}"></app-user-name>
         <span class="user-action"> is asking:</span>
         <h2 class="question-title">{{ question.title }}</h2>
     </div>

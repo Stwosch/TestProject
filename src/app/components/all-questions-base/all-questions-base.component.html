@@ -6,7 +6,7 @@
         </app-header>
     </header>
     <main>
-        <app-question *ngFor="let question of allQuestionsBaseData" [question]="question" [routerLink]="['/question', question.id]"></app-question>
-        <div class="load-more-questions">load more questions</div>
+        <app-question *ngFor="let question of allQuestionsBaseData" [question]="question" [routerLink]="['/question', question.id]" (loadMoreQuestionsBtn)="showLoadMoreQuestionsBtn()"></app-question>
+        <div class="load-more-questions" [hidden]="hideLoadMoreQuestionsBtn">load more questions</div>
     </main>
 </div>

@@ -21,7 +21,7 @@ export class UsersService {
         
         data.forEach(val => {
             
-            users.push(new User(val.id, val.name, val.photo));
+            users.push(new User(val.id, val.name, val.photo, val.member, val.peers, val.lastTimeOnline, val.findings, val.activityLevel, val.discussions));
         });
         
         return users;
@@ -37,7 +37,7 @@ export class UsersService {
       .map((response: Response) => {
         
         const data = response.json();
-        return new User(data.id, data.name, data.photo);
+        return new User(data.id, data.name, data.photo, data.member, data.peers, data.lastTimeOnline, data.findings, data.activityLevel, data.discussions);
       })
       .toPromise();
   }

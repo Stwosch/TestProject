@@ -12,6 +12,23 @@ export class AllQuestionsBaseService {
               private questionService: QuestionsService,
               private commentsService: CommentsService,
               private usersService: UsersService) { }
+
+  createAllQuestionsBase(question: Question, answers: Answer[], comments: Comment[], users: User[]) {
+
+    const user: User = this.getUser(question, users);
+
+    if(user === undefined) {
+      console.error("User can't be undefined");
+      return;
+    }
+    
+    const relatedDiscussion = this.getRelatedDiscussion(question, comments);
+    const peersInvolved = this.getPeersInvolved(question, answers, comments);
+    const conversations = this.getConversations(question, answers);
+    const activities = this.getActivities(question, answers, comments);
+
+    return new AllQuestionsBase(question.id, question.title, user.id, user.name, user.photo, relatedDiscussion, peersInvolved, conversations, activities);
+  }
   
   private getUser(question: Question, users: User[]): User {
       
@@ -110,7 +127,7 @@ export class AllQuestionsBaseService {
     return activities;
   }
 
-  private createAllQuestionsBaseObjects(resolve, rejected, questions: Question[], answers: Answer[], comments: Comment[], users: User[]) {
+  createAllQuestionsBaseObjects(resolve, rejected, questions: Question[], answers: Answer[], comments: Comment[], users: User[]) {
     
     const data: AllQuestionsBase[] = [];
 
@@ -128,7 +145,7 @@ export class AllQuestionsBaseService {
         const conversations = this.getConversations(question, answers);
         const activities = this.getActivities(question, answers, comments);
 
-        data.push(new AllQuestionsBase(question.id, question.title, user.name, user.photo, relatedDiscussion, peersInvolved, conversations, activities));
+        data.push(new AllQuestionsBase(question.id, question.title, user.id, user.name, user.photo, relatedDiscussion, peersInvolved, conversations, activities));
     });
 
     resolve(data);

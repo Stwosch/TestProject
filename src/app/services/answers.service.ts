@@ -30,4 +30,25 @@ export class AnswersService {
       .toPromise();
   }
 
+  getAllAnswers(): Promise<Answer[]> {
+
+    const url = 'http://localhost:3000/answers';
+
+    return this.http.get(url)
+      .map((response: Response) => {
+        
+        const data = response.json();
+        const answers: Answer[] = [];
+
+        data.forEach(val => {
+
+          answers.push(new Answer(val.id, val.description, val.date, val.votes, val.usersId, val.questionId));
+        });
+
+        return answers;
+
+      })
+      .toPromise();
+  }
+
 }

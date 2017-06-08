@@ -3,11 +3,23 @@ export class User {
     id: number;
     name: string;
     photo: string;
+    member: number;
+    peers: number;
+    lastTimeOnline: string;
+    findings: number;
+    activityLevel: number;
+    discussions: number;
     
-    constructor(id, name, photo) {
+    constructor(id, name, photo, member, peers, lastTimeOnline, findings, activityLevel, discussions) {
         this.id = id;
         this.name = name;
         this.photo = photo;
+        this.member = member;
+        this.peers = peers;
+        this.lastTimeOnline = lastTimeOnline;
+        this.findings = findings;
+        this.activityLevel = activityLevel;
+        this.discussions = discussions;
     }
 }
 
@@ -75,6 +87,7 @@ export class AllQuestionsBase {
     
     id: number;
     title: string;
+    userId: number;
     userName: string;
     userPhoto: string;
     relatedDiscussion: number;
@@ -82,9 +95,10 @@ export class AllQuestionsBase {
     conversations: number;
     activities: any[];
 
-    constructor(id, title, userName, userPhoto, relatedDiscussion, peersInvolved, conversations, activities) {
+    constructor(id, title, userId, userName, userPhoto, relatedDiscussion, peersInvolved, conversations, activities) {
         this.id = id;
         this.title = title;
+        this.userId = userId;
         this.userName = userName;
         this.userPhoto = userPhoto;
         this.relatedDiscussion = relatedDiscussion;

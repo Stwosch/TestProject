@@ -1,7 +1,7 @@
 <div class="label">
-  <img src="assets/{{ ( user | async )?.photo }}" alt="User" class="user-photo" *ngIf="user | async">
+  <app-user-photo [user]="{id: (user | async)?.id, photo: (user | async)?.photo}" *ngIf="user | async"></app-user-photo>
   <div class="topic-title">
-    <strong class="user-name">{{ ( user | async )?.name }}</strong>
+    <app-user-name [user]="{id: (user | async)?.id, name: (user | async)?.name}"></app-user-name>
     <span class="user-action"> is asking:</span>
     <h2 class="question-title">{{ question.title }}</h2>
   </div>

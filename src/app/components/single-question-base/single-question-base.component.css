@@ -8,6 +8,7 @@ main {
     width: 95%;
     padding-top: 28rem;
     margin: 0 auto;
+    min-height: 70rem;
 }
 
 .question-activity-time {

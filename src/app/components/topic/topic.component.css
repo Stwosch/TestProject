@@ -22,18 +22,11 @@
     flex-basis: 7rem;
 }
 
-.user-name {
-    font-family: 'AurulentSans-Bold', 'sans-serif';
-    color: #0266B3;
-    font-size: 2.4rem;
-}
-
 .user-action {
     color: #818B98;
     font-family: 'AurulentSans-Regular', 'sans-serif';
     text-transform: uppercase;
     font-size: 1.4rem;
-    margin-left: 1rem;
 }
 
 .question-title {
@@ -52,6 +45,7 @@
 }
 
 .topic-title {
+    margin-left: 4rem;
     flex: 7;
 }
 

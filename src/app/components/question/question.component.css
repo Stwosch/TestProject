@@ -19,26 +19,11 @@
     width: 90rem;
 }
 
-.user-photo {
-    display: block;
-    width: 7rem;
-    height: 7rem;
-    border-radius: 100%;
-    margin-right: 5rem;
-}
-
-.user-name {
-    font-family: 'AurulentSans-Bold', 'sans-serif';
-    color: #0266B3;
-    font-size: 2.4rem;
-}
-
 .user-action {
     color: #818B98;
     font-family: 'AurulentSans-Regular', 'sans-serif';
     text-transform: uppercase;
     font-size: 1.4rem;
-    margin-left: 1rem;
 }
 
 .question-title {
@@ -125,4 +110,8 @@
     font-family: 'AurulentSans-BoldItalic', 'sans-serif';
     font-size: 2rem;
     text-align: center;
+}
+
+.question-description {
+    margin-left: 5rem;
 }

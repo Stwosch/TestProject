@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-header-title',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderTitleComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) { 
+
+    if(this.route.snapshot.url[0]) {
+      this.title = "question";
+    } else {
+      this.title = "questions";
+    }
+  }
+
+  private title: string;
 
   ngOnInit() {
+    console.log()
   }
 
 }

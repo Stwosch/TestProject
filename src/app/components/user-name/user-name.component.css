@@ -1,0 +1,9 @@
+h3 {
+    font-family: 'AurulentSans-Bold', 'sans-serif';
+    color: #0266B3;
+    font-size: 2.4rem;
+    margin: 0;
+    display: inline-block;
+    margin-right: 1rem;
+    cursor: pointer;
+}
