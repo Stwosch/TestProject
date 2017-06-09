@@ -56,3 +56,18 @@
 .user-activity-type-answer::after {
     background-color: #000;
 }
+
+@media (max-width: 1230px) {
+
+    :host {
+        margin: 0 1rem;
+    }
+} 
+
+@media (max-width: 620px) {
+
+    :host {
+        height: 99%;
+        margin: 0 0.25rem;
+    }
+}

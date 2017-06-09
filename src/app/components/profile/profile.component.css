@@ -1,6 +1,7 @@
 .container {
     display: block;
-    width: 120rem;
+    max-width: 120rem;
+    width: 100%;
     position: fixed;
     background-color: #fff;
     top: 5rem;
@@ -33,7 +34,8 @@
 .user-info {
     padding: 2rem 0 3rem 0;
     margin: 0 auto;
-    width: 72rem;
+    width: 97%;
+    max-width: 72rem;
     border-bottom: 2px solid #A7A9AC;
     display: flex;
     justify-content: space-between;
@@ -70,7 +72,8 @@
 .user-acitivity-search {
     margin: 2rem auto 4rem auto;
     display: flex;
-    width: 72rem;
+    max-width: 72rem;
+    width: 97%;
     justify-content: space-between;
 }
 
@@ -98,7 +101,8 @@
 
 .user-statistics  {
     display: flex;
-    width: 72rem;
+    max-width: 72rem;
+    width: 97%;
     margin: 5rem auto;
     justify-content: space-around;
 }
@@ -157,7 +161,8 @@
     display: flex;
     justify-content: center;
     margin: 2rem auto 4rem auto;
-    width: 50rem;
+    max-width: 50rem;
+    width: 97%;
     flex-basis: 350px;
     flex-wrap: wrap;
 }
@@ -206,7 +211,8 @@
 
 .selected-discussion-statistics {
     display: flex;
-    width: 72rem;
+    max-width: 72rem;
+    width: 97%;
     margin: 0 auto;
     justify-content: space-around;
     padding: 2rem 0 4rem 0;
@@ -235,20 +241,6 @@
     height: 100%;
     background: rgba(0,0,0,0.75);
     z-index: 4;
-}
-
-@media (max-width: 1200px) {
-
-    .container {
-        width: 100%;
-    }
-}
-
-@media (max-width: 740px) {
-
-    .user-info, .user-acitivity-search, .user-statistics, .users-related, .selected-discussion-statistics {
-        width: 97%;
-    }
 }
 
 @media (max-width: 560px) {

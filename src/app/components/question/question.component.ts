@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter,  HostListener } from '@angular/core';
 import { AllQuestionsBase } from "../../domain-model-classes/custom.classes";
 
 @Component({
@@ -10,16 +10,22 @@ export class QuestionComponent implements OnInit {
   
   constructor() { 
 
-    this.tilesSize = 3;
+    this.tilesSize = this.getWindowWidth();
   }
 
   @Input() question: AllQuestionsBase;
   @Output() loadMoreQuestionsBtn = new EventEmitter();
 
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) { 
+    this.tilesSize = this.getWindowWidth(); 
+    this.tiles = this.generateActivities();
+  }
+
   showMore: boolean;
   tilesSize;
   tiles;
-
+  
   generateActivities() {
 
     if(this.question.activities.length > this.tilesSize) {
@@ -29,6 +35,18 @@ export class QuestionComponent implements OnInit {
     }
 
     return this.question.activities.slice(0, this.tilesSize);
+  }
+
+  getWindowWidth() {
+
+    if(window.innerWidth > 1120) {
+      return 3;
+    } else if (window.innerWidth < 1120 && window.innerWidth > 940) {
+      return 2;
+    } else {
+      return 1;
+    }
+
   }
 
   ngOnInit() {

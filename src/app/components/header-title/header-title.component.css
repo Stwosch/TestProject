@@ -17,3 +17,20 @@ h1 {
     height: 3rem;
     font-size: 3.3rem;
 }
+
+:host {
+    align-self: flex-end;
+    display: inline-block;
+    margin-right: 2rem;
+}
+
+@media (max-width: 400px) {
+    
+    h1 {
+        font-size: 2.4rem;
+    }
+
+    :host {
+        margin-right: 0;
+    }
+}

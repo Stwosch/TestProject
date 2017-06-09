@@ -12,13 +12,14 @@ main {
 }
 
 .load-more-questions-btn {
+    max-width: 120rem;
+    width: 100%;
     display: block;
     text-align: left;
     cursor: pointer;
     border: 0;
     background-color: #fff;
     margin: 0 auto;
-    width: 120rem;
     padding: 2rem 1rem;
     box-sizing: border-box;
     font-size: 1.6rem;
@@ -32,4 +33,12 @@ main {
 
 .nothing-more-questions {
     color: #A7A9AC;
+}
+
+
+@media (max-width: 470px) {
+
+    main {
+        padding-top: 33rem;
+    }
 }

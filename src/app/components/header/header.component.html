@@ -1,9 +1,11 @@
-<a href="" class="back" [routerLink]="['/']">
-  <i class="fa fa-angle-left"></i>
-</a>
 <div class="container">
   <div class="top">
-    <app-header-title></app-header-title>
+    <div class="wrapper">
+      <a href="" class="back" [routerLink]="['/']">
+        <i class="fa fa-angle-left"></i>
+      </a>
+      <app-header-title></app-header-title>
+    </div>
     <ng-content></ng-content>
   </div>
   <ng-content select="app-header-search"></ng-content>

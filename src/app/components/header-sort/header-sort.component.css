@@ -3,6 +3,7 @@
     font-size: 1.4rem;
     display: block;
     align-self: flex-end;
+    margin-top: 4rem;
 }
 
 input[type="radio"] {
@@ -57,4 +58,11 @@ i {
 .sort-by {
     display: inline-block;
     margin-left: 3rem;
+}
+
+@media (max-width: 470px) {
+    .sort-by {
+        margin-top: 2rem;
+        margin-left: 0;
+    }
 }
