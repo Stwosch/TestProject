@@ -48,8 +48,6 @@ export class ProfileComponent implements OnInit {
 
         this.setData(data);
         this.show();
-        console.log(data.hottestDiscussionUser);
-        console.log(data.hottestDiscussionQuestion)
       });
   }
 

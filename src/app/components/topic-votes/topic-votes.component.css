@@ -1,13 +1,17 @@
 :host {
     flex: 3;
-    text-align: center;
+    text-align: right;
     margin-top: 4rem;
     font-family: 'AurulentSans-Italic', 'sans-serif';
     font-size: 1.6rem;
     background-color: #fff;
+    display: block;
+    margin-right: 5rem;
+    min-width: 16rem;
 }
 
 .votes-number {
+    display: inline-block;
     margin-right: 1rem;
     font-weight: bold;
     font-family: 'AurulentSans-Regular', 'sans-serif';

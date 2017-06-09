@@ -1,6 +1,7 @@
 :host {
     display: block;
-    width: 120rem;
+    width: 100%;
+    max-width: 120rem;
     margin: 0 auto;
     box-shadow: 3px 0 5px 0 rgba(0,0,0,0.15);
     position: relative;
@@ -80,4 +81,27 @@
     left: 50%;
     bottom: -2.5rem;
     transform: translateX(-50%);
+}
+
+
+@media (max-width: 920px) {
+
+    .placeholder {
+        display: none;
+    }
+}
+
+@media (max-width: 720px) {
+
+    .topic-content {
+        display: block;
+    }
+
+    app-topic-votes {
+        padding-bottom: 6rem;
+    }
+
+    .topic-description {
+        margin-bottom: 1rem;
+    }
 }

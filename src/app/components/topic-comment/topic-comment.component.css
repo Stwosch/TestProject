@@ -3,10 +3,11 @@
     width: 90.8%;
     background-color: #fff;
     box-shadow: 3px 0 5px 0 rgba(0,0,0,0.15);
+    flex-wrap: wrap;
 }
 
 .user-photo-border {
-    margin: 2rem;
+    padding: 2rem;
 }
 
 .user-action {
@@ -31,6 +32,7 @@
     padding: 2rem;
     border-left: 1px solid #E4E4E4;
     flex: 8;
+    min-width: 40rem;
 }
 
 .comment-content {
@@ -58,4 +60,33 @@
     left: 50%;
     bottom: -2.5rem;
     transform: translateX(-50%);
+}
+
+@media (max-width: 900px) {
+
+    :host {
+        width: 100%;
+        border-left: 1rem solid #D8D8D8;
+        box-sizing: border-box;
+    }
+}
+
+
+@media (max-width: 820px) {
+
+    app-topic-votes {
+        padding-bottom: 6rem;
+        margin-top: 0;
+    }
+
+    .comment {
+        border-left: 0;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .comment {
+        min-width: 30rem;
+    }
 }

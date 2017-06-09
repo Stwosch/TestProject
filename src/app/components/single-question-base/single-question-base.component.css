@@ -24,7 +24,8 @@ main {
 }
 
 .topic-answers {
-    width: 120rem;
+    width: 100%;
+    max-width: 120rem;
     margin: 0 auto;
     padding: 10rem 0 5rem 0;
 }
@@ -34,4 +35,10 @@ main {
     font-size: 2rem;
     font-family: 'AurulentSans-Italic', 'sans-serif';
     margin-bottom: 2rem;
+}
+
+@media (max-width: 560px) {
+    .question-activity-time {
+        display: none;
+    }
 }

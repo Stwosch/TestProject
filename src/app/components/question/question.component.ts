@@ -43,8 +43,10 @@ export class QuestionComponent implements OnInit {
       return 3;
     } else if (window.innerWidth < 1120 && window.innerWidth > 940) {
       return 2;
-    } else {
+    } else if(window.innerWidth < 940 && window.innerWidth > 450) {
       return 1;
+    } else {
+      return 0;
     }
 
   }
