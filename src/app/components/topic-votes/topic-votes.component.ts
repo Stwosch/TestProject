@@ -9,10 +9,10 @@ export class TopicVotesComponent implements OnInit {
   
   @Input() votes: number;
 
-  private votesNumber: number;
-  private votesText: string; 
+  votesNumber: number;
+  votesText: string; 
 
-  private setVotes() {
+  setVotes() {
 
     if(this.votes >= 0) {
 
@@ -26,12 +26,12 @@ export class TopicVotesComponent implements OnInit {
     }
   }
 
-  private upVote() {
+  upVote() {
     this.votes += 1;
     this.setVotes();
   }
 
-  private downVote() {
+  downVote() {
     this.votes -= 1;
     this.setVotes();
   }

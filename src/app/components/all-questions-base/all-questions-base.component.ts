@@ -13,28 +13,74 @@ export class AllQuestionsBaseComponent implements OnInit {
 
     this.start = 0;
     this.increases = 3;
-    this.hideLoadMoreQuestionsBtn = true;
+    this.hideBtn = true;
+    this.allQuestionsBaseData= [];
+    this.disableBtn = false;
+    this.actuallySort = 'recent';
   }
 
-  private start: number;
-  private increases: number;
-  private allQuestionsBaseData: AllQuestionsBase[];
-  private hideLoadMoreQuestionsBtn: boolean;
+  start: number;
+  increases: number;
+  allQuestionsBaseData: AllQuestionsBase[];
+  hideBtn: boolean;
+  disableBtn: boolean;
+  actuallySort: string;
 
-  private showLoadMoreQuestionsBtn() {
-    this.hideLoadMoreQuestionsBtn = false;
+  showLoadMoreQuestionsBtn() {
+    this.hideBtn = false;
   }
+
+  loadMoreData(start, increases) {
+    this.allQuestionBaseService.getAllQuestionsBaseData(start, increases)
+    .then((data: AllQuestionsBase[]) => {
+
+      if(data.length < increases) {
+
+        this.disableBtn = true;
+      }
+
+      this.start += this.increases; 
+
+      data.forEach((val: AllQuestionsBase) => {
+        this.allQuestionsBaseData.push(val);
+      });
+
+      if(this.actuallySort === 'recent') {
+        this.sortRecent();
+      } else {
+        this.sortHot();
+      }
+
+    })
+    .catch(err => console.error(err));
+  }
+
+  sortHot() {
+    this.allQuestionsBaseData.sort((a: any, b: any) => {
+      return b.activities.length - a.activities.length;
+    });
+
+    this.actuallySort = 'hot';
+  }
+
+  sortRecent() {
+    this.allQuestionsBaseData.sort((a: any, b: any) => {
+      return a.id - b.id;
+    });
+
+    this.actuallySort = 'recent';
+  }
+
+  showFoundQuestions(questions: AllQuestionsBase[]) {
+
+    this.allQuestionsBaseData = questions;
+    this.disableBtn = true;
+  }
+
 
   ngOnInit() {
 
-    this.allQuestionBaseService.getAllQuestionsBaseData(this.start, this.increases)
-    .then((data: AllQuestionsBase[]) => {
-
-      this.start += this.increases; 
-      this.allQuestionsBaseData = data;
-
-    })
-    .catch(err => console.log(err));
+    this.loadMoreData(this.start, this.increases);
   }
 
 

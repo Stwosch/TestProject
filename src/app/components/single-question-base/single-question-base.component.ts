@@ -17,12 +17,12 @@ export class SingleQuestionBaseComponent implements OnInit {
               private questionsService: QuestionsService,
               private singleQuestionBaseService: SingleQuestionBaseService) { }
 
-  private question: Question;
-  private answers: Answer[];
-  private lastDay;
-  private peersAnswers: number;
+  question: Question;
+  answers: Answer[];
+  lastDay;
+  peersAnswers: number;
 
-  private countPeersAnswers(): number {
+  countPeersAnswers(): number {
     
     const peersIndexes: number[] = [];
 
@@ -39,7 +39,7 @@ export class SingleQuestionBaseComponent implements OnInit {
     return peersIndexes.length;
   }
   
-  private getData(id) {
+   getData(id) {
 
     this.questionsService.getQuestionById(id)
       .then(question => this.question = question)

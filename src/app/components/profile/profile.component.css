@@ -9,7 +9,7 @@
     text-align: center;
     font-size: 1.4rem;
     font-family: 'AurulentSans-Regular', 'sans-serif';
-    padding: 2rem 0;
+    padding-top: 2rem;
     overflow: auto;
     height: 80vh;
     z-index: 5;
@@ -27,23 +27,32 @@
     font-family: 'AurulentSans-Bold', 'sans-serif';
     color: #0266B3;
     font-size: 2.4rem;
+    margin-right: 0.3rem;
 }
 
 .user-info {
     padding: 2rem 0 3rem 0;
     margin: 0 auto;
-    width: 60%;
+    width: 72rem;
     border-bottom: 2px solid #A7A9AC;
     display: flex;
     justify-content: space-between;
 }
 
-.user-activity-label {
+.user-activity-label, .subtitle {
     color: #818B98;
     font-family: 'AurulentSans-Regular', 'sans-serif';
     text-transform: uppercase;
     font-size: 1.4rem;
+}
+
+.user-activity-label {
     margin-right: 1rem;
+}
+
+
+.subtitle {
+    padding: 0 2rem;
 }
 
 .activity-level-badge {
@@ -61,7 +70,7 @@
 .user-acitivity-search {
     margin: 2rem auto 4rem auto;
     display: flex;
-    width: 60%;
+    width: 72rem;
     justify-content: space-between;
 }
 
@@ -84,11 +93,12 @@
     font-size: 3rem;
     font-family: 'AurulentSans-BoldItalic', 'sans-serif';
     word-spacing: 0.5rem;
+    margin: 0 1rem;
 }
 
 .user-statistics  {
     display: flex;
-    width: 60%;
+    width: 72rem;
     margin: 5rem auto;
     justify-content: space-around;
 }
@@ -147,7 +157,13 @@
     display: flex;
     justify-content: center;
     margin: 2rem auto 4rem auto;
-    width: 30%;
+    width: 50rem;
+    flex-basis: 350px;
+    flex-wrap: wrap;
+}
+
+.users-related-item {
+    margin-bottom: 1rem;
 }
 
 .users-photo-block {
@@ -190,12 +206,18 @@
 
 .selected-discussion-statistics {
     display: flex;
-    width: 60%;
+    width: 72rem;
     margin: 0 auto;
     justify-content: space-around;
-    padding: 2rem 0;
+    padding: 2rem 0 4rem 0;
     font-family: 'AurulentSans-Italic', 'sans-serif';
     font-size: 1.8rem;
+    flex-basis: 42rem;
+    flex-wrap: wrap;
+}
+
+.selected-discussion-statistics-item {
+    margin: 0 1rem;
 }
 
 .close {
@@ -213,4 +235,51 @@
     height: 100%;
     background: rgba(0,0,0,0.75);
     z-index: 4;
+}
+
+@media (max-width: 1200px) {
+
+    .container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 740px) {
+
+    .user-info, .user-acitivity-search, .user-statistics, .users-related, .selected-discussion-statistics {
+        width: 97%;
+    }
+}
+
+@media (max-width: 560px) {
+
+    .container {
+        top: 0;
+        height: 100vh;
+    }
+
+    .user-info {
+        flex-direction: column;
+    }
+
+    .user-activity-label {
+        display: block;
+    }
+
+    .user-info-item {
+        margin-bottom: 1.5rem;
+    }
+
+    .user-info-item:last-child {
+        margin-bottom: 0;
+    }
+
+    .user-statistics {
+        flex-basis: 560px;
+        flex-wrap: wrap;
+    }
+
+    .selected-discussion-statistics {
+        font-size: 1.6rem;
+    }
 }

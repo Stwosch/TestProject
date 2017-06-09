@@ -18,16 +18,16 @@ export class TopicAnswerComponent implements OnInit {
   }
 
   @Input() answer: Answer;
-  private user: Promise<User>;
-  private comments: Promise<Comment[]>;
-  private date: string;
-  private hideBtn: boolean;
+  user: Promise<User>;
+  comments: Promise<Comment[]>;
+  date: string;
+  hideBtn: boolean;
 
-  private getUser() {
+  getUser() {
     this.user = this.usersService.getUserById(this.answer.usersId);
   }
 
-  private setDate() {
+  setDate() {
     
     const days = Math.floor(Math.abs(new Date(this.answer.date).getTime() - new Date().getTime()) / 86400000);
     
@@ -41,12 +41,12 @@ export class TopicAnswerComponent implements OnInit {
 
   }
 
-  private getComments() {
+  getComments() {
 
-    this.comments = this.commentsService.getCommentsByQuestionId(this.answer.questionsId);
+    this.comments = this.commentsService.getCommentsByAnswersId(this.answer.id);
   }
 
-  private hideDefaultBtn() {
+  hideDefaultBtn() {
     this.hideBtn = true;
     this.cdRef.detectChanges();
   }

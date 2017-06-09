@@ -16,11 +16,11 @@ export class QuestionComponent implements OnInit {
   @Input() question: AllQuestionsBase;
   @Output() loadMoreQuestionsBtn = new EventEmitter();
 
-  private showMore: boolean;
-  private tilesSize;
-  private tiles;
+  showMore: boolean;
+  tilesSize;
+  tiles;
 
-  private generateActivities() {
+  generateActivities() {
 
     if(this.question.activities.length > this.tilesSize) {
       this.showMore = true;

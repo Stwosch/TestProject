@@ -11,9 +11,12 @@ main {
     min-height: 70rem;
 }
 
-.load-more-questions {
+.load-more-questions-btn {
+    display: block;
+    text-align: left;
+    cursor: pointer;
+    border: 0;
     background-color: #fff;
-    color: #DC173F;
     margin: 0 auto;
     width: 120rem;
     padding: 2rem 1rem;
@@ -21,4 +24,12 @@ main {
     font-size: 1.6rem;
     font-family: 'AurulentSans-Regular', 'sans-serif';
     box-shadow: 3px 0 5px 0 rgba(0,0,0,0.15);
+}
+
+.load-more-questions {
+    color: #DC173F;
+}
+
+.nothing-more-questions {
+    color: #A7A9AC;
 }

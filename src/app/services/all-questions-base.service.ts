@@ -30,12 +30,12 @@ export class AllQuestionsBaseService {
     return new AllQuestionsBase(question.id, question.title, user.id, user.name, user.photo, relatedDiscussion, peersInvolved, conversations, activities);
   }
   
-  private getUser(question: Question, users: User[]): User {
+  getUser(question: Question, users: User[]): User {
       
     return users.find((user: User) => user.id === question.usersId);
   }
 
-  private getRelatedDiscussion(question: Question, comments: Comment[]): number {
+  getRelatedDiscussion(question: Question, comments: Comment[]): number {
     
     const answersIds: number[] = [];
 
@@ -55,7 +55,7 @@ export class AllQuestionsBaseService {
     return answersIds.length;
   }
 
-  private getPeersInvolved(question: Question, answers: Answer[], comments: Comment[]): number {
+  getPeersInvolved(question: Question, answers: Answer[], comments: Comment[]): number {
     
     const peers: number[] = [];
 
@@ -89,7 +89,7 @@ export class AllQuestionsBaseService {
     return peers.length;
   }
 
-  private getConversations(question: Question, answers: Answer[]): number {
+  getConversations(question: Question, answers: Answer[]): number {
 
     let conversations = 0;
 
@@ -104,7 +104,7 @@ export class AllQuestionsBaseService {
     return conversations;
   }
 
-  private getActivities(question: Question, answers: Answer[], comments: Comment[]) {
+  getActivities(question: Question, answers: Answer[], comments: Comment[]) {
 
     const activities = [];
 
@@ -151,7 +151,7 @@ export class AllQuestionsBaseService {
     resolve(data);
   }
 
-  private getAllUsers(resolve, rejected, questions: Question[], answers: Answer[], comments: Comment[]) {
+  getAllUsers(resolve, rejected, questions: Question[], answers: Answer[], comments: Comment[]) {
 
     this.usersService.getAllUsers()
       .then((users: User[]) => this.createAllQuestionsBaseObjects(resolve, rejected, questions, answers, comments, users))
@@ -159,7 +159,7 @@ export class AllQuestionsBaseService {
 
   }
 
-  private getAnswersCommentsForQuestions(resolve, rejected, questions: Question[]) {
+  getAnswersCommentsForQuestions(resolve, rejected, questions: Question[]) {
     
     if(questions.length < 1) {
 
@@ -214,6 +214,15 @@ export class AllQuestionsBaseService {
         .catch(err => console.log(err));
     });
     
+  }
+
+  getAllQuestionsBaseSearch(q: string) {
+    return new Promise((resolve, rejected) => {
+
+      this.questionService.getQuestionsSearch(q)
+        .then((questions: Question[]) => this.getAnswersCommentsForQuestions(resolve, rejected, questions))
+        .catch(err => console.log(err));
+    });
   }
 
 }

@@ -1,12 +1,15 @@
 <div class="container">
     <header>
         <app-header>
-            <app-header-sort></app-header-sort>
-            <app-header-search></app-header-search>
+            <app-header-sort (sortHotEvent)="sortHot()" (sortRecentEvent)="sortRecent()"></app-header-sort>
+            <app-header-search (searchQuestions)="showFoundQuestions($event)"></app-header-search>
         </app-header>
     </header>
     <main>
         <app-question *ngFor="let question of allQuestionsBaseData" [question]="question" [routerLink]="['/question', question.id]" (loadMoreQuestionsBtn)="showLoadMoreQuestionsBtn()"></app-question>
-        <div class="load-more-questions" [hidden]="hideLoadMoreQuestionsBtn">load more questions</div>
+        <button type="button" class="load-more-questions-btn" [disabled]="disableBtn" [hidden]="hideBtn" (click)="loadMoreData(start, increases)">
+            <span class="load-more-questions" *ngIf="!disableBtn">load more questions</span>
+            <span class="nothing-more-questions" *ngIf="disableBtn">nothing more questions</span>    
+        </button>
     </main>
 </div>

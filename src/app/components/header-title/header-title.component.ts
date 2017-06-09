@@ -17,7 +17,7 @@ export class HeaderTitleComponent implements OnInit {
     }
   }
 
-  private title: string;
+  title: string;
 
   ngOnInit() {
     console.log()

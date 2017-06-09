@@ -13,16 +13,16 @@ export class AppComponent implements OnInit {
       this.body = document.getElementsByTagName('body')[0];
     }
 
-    private hideModal: boolean;
-    private body;
+    hideModal: boolean;
+    body;
 
-    private showModal() {
+    showModal() {
 
       this.body.style.overflow = 'hidden';
       this.hideModal = false;
     }
 
-    private closeModal() {
+    closeModal() {
 
       this.body.style.overflow = 'auto';
       this.hideModal = true;

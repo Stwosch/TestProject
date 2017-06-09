@@ -31,6 +31,28 @@ export class CommentsService {
       .toPromise();
 
   }
+  getCommentsByAnswersId(id: number): Promise<Comment[]> {
+    
+    const url = 'http://localhost:3000/comments?answersId=' + id;
+
+    return this.http.get(url)
+      .map((response: Response) => {
+        
+        const data = response.json();
+        
+        const comments: Comment[] = [];
+
+        data.forEach(val => {
+
+          comments.push(new Comment(val.id, val.description, val.date, val.votes, val.usersId, val.answersId, val.questionId));
+        });
+
+        return comments;
+
+      })
+      .toPromise();
+
+  }
 
   getAllComments(): Promise<Comment[]> {
 

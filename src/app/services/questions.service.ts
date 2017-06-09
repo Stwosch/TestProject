@@ -8,6 +8,27 @@ import { Question } from "../domain-model-classes/custom.classes";
 export class QuestionsService {
 
   constructor(private http: Http) { }
+
+  getQuestionsSearch(q: string) {
+    
+    const url: string = 'http://localhost:3000/questions?q=' + q;
+
+    return this.http.get(url)
+        .map((response: Response) => {
+        
+        const data = response.json();
+        const questions: Question[] = [];
+
+        data.forEach(val => {
+
+          questions.push(new Question(val.id, val.title, val.description, val.votes, val.follow, val.usersId));
+
+        });
+
+        return questions;
+    })
+    .toPromise();
+  }
   
   getQuestions(start:number, quantity: number): Promise<Question[]> {
     

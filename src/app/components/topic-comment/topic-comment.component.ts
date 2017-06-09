@@ -13,14 +13,14 @@ export class TopicCommentComponent implements OnInit {
   
   @Input() comment: Comment;
   @Output() commentCreated = new EventEmitter();
-  private user: Promise<User>;
-  private date: string;
+  user: Promise<User>;
+  date: string;
 
-  private getUser() {
+  getUser() {
     this.user = this.usersService.getUserById(this.comment.usersId);
   }
 
-  private setDate() {
+  setDate() {
     
     const days = Math.floor(Math.abs(new Date(this.comment.date).getTime() - new Date().getTime()) / 86400000);
     

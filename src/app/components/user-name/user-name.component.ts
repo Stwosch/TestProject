@@ -12,9 +12,9 @@ export class UserNameComponent implements OnInit {
   
   @Input() user;
 
-  private showModal() {
-    event.stopPropagation();
+  showModal() {
     this.modalService.showModal(this.user.id);
+    event.stopPropagation();
   }
 
   ngOnInit() {

@@ -13,14 +13,14 @@ export class TopicComponent implements OnInit {
 
   @Input() question: Question;
 
-  private user: Promise<User>;
-  private follow: string;
+  user: Promise<User>;
+  follow: string;
   
-  private getUser() {
+  getUser() {
     this.user = this.usersService.getUserById(this.question.usersId);
   }
 
-  private setFollow() {
+  setFollow() {
 
     if(this.question.follow) {
       this.follow = "follow";

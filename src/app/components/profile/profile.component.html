@@ -3,15 +3,15 @@
   <img src="assets/{{ data.user.photo }}" alt="User" class="user-photo">
   <strong class="user-name">{{ data.user.name }}</strong>
   <div class="user-info">
-    <div>
+    <div class="user-info-item">
       <span class="user-activity-label">member for</span>
       {{ data.user.member }} months
     </div>
-    <div>
+    <div class="user-info-item">
       <span class="user-activity-label">last seen</span>
       {{ data.user.lastTimeOnline }}
     </div>
-    <div>
+    <div class="user-info-item">
       <span class="user-activity-label">activity level</span>
       <span *ngFor="let activeLev of activityLevel">
           <span class="activity-level-badge active" *ngIf="activeLev"></span>
@@ -28,7 +28,7 @@
       <i class="fa fa-angle-right" aria-hidden="true"></i>
     </div>
   </div>
-  <span class="user-activity-label">that's where we have been these {{ data.user.member }} months ago</span>
+  <span class="subtitle">that's where we have been these {{ data.user.member }} months ago</span>
   <div class="user-statistics">
     <div class="user-statistic">
       <div class="user-statistic-content-1">
@@ -55,35 +55,35 @@
       </div>
     </div>
   </div>
-  <span class="user-activity-label">who joined the platform that same period</span>
+  <span class=" subtitle">who joined the platform that same period</span>
   <div class="users-related">
-    <div *ngFor="let user of data.whoJoined">
+    <div *ngFor="let user of data.whoJoined" class="users-related-item">
       <div class="users-photo-block">
         <img src="assets/{{ user.photo }}" alt="User" class="user-photo">
       </div>
       <div class="users-related-name">{{ user.name }}</div>
     </div>
   </div>
-  <span class="user-activity-label">the hottest discussion these days</span>
+  <span class="subtitle">the hottest discussion these days</span>
   <div class="selected-discussion">
     <img src="assets/{{ data.hottestDiscussionUser.photo }}" alt="User" class="user-photo selected-discussion-photo">
     <span class="user-name">{{ data.hottestDiscussionUser.name }}</span>
     <span class="user-activity-label">found the guardian article</span>
     <div class="question-title">{{ data.hottestDiscussionQuestion.title }}</div>
     <div class="selected-discussion-statistics">
-      <div>
+      <div class="selected-discussion-statistics-item">
           <span class="statistic-number">{{ data.hottestDiscussionQuestion.peersInvolved }}</span>
             peers involved
       </div>
-      <div>
+      <div class="selected-discussion-statistics-item">
           <span class="statistic-number">{{ data.hottestDiscussionQuestion.relatedDiscussion }}</span>
             related discussion
       </div>
-      <div>
+      <div class="selected-discussion-statistics-item">
           <span class="statistic-number">{{ data.hottestDiscussionQuestion.conversations }}</span>
             conversations
       </div>
-      <div>
+      <div class="selected-discussion-statistics-item">
           <span class="statistic-number">{{ data.question.votes }}</span>
             <span *ngIf="data.question.votes >= 0">upvotes</span>
             <span *ngIf="data.question.votes < 0">downvotes</span>

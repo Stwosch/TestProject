@@ -11,9 +11,9 @@ export class QuestionActivityComponent implements OnInit {
   
   @Input() tile;
 
-  private actionType: string;
-  private actionTypeClass: string;
-  private user: Promise<User>;
+  actionType: string;
+  actionTypeClass: string;
+  user: Promise<User>;
 
   constructor(private usersService: UsersService) { 
     this.actionTypeClass = "user-activity-type";

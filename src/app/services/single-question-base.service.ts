@@ -12,7 +12,7 @@ export class SingleQuestionBaseService {
               private commentsService: CommentsService) { }
 
   
-  private getDays(date: string) {
+  getDays(date: string) {
     
     const newDate: number = new Date(date).getTime();
     const now: number = new Date().getTime();
@@ -21,7 +21,7 @@ export class SingleQuestionBaseService {
 
   }
 
-  private findCandidates(arr) {
+  findCandidates(arr) {
 
     if(arr.length === 0) {
       return "";
@@ -40,7 +40,7 @@ export class SingleQuestionBaseService {
 
   }
 
-  private getAnswersComments(data) {
+  getAnswersComments(data) {
     
     const result = {
       answers: [],
