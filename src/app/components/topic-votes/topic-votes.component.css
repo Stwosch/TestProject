@@ -37,3 +37,9 @@
     border-top: 1.5rem solid #0266B3;
     transform: translateY(2rem);
 }
+
+@media (max-width: 500px) {
+    :host {
+        align-self: flex-end;
+    }
+}

@@ -37,12 +37,18 @@
 }
 
 .follow {
+    float: left;
     font-family: 'AurulentSans-Bold', 'sans-serif';
     color: #0266B3;
     font-size: 2rem;
     align-self: center;
     flex: 1;
     cursor: pointer;
+    margin-left: 3rem;
+}
+
+.follow-bottom {
+    display: none;
 }
 
 .topic-title {
@@ -70,9 +76,10 @@
 }
 
 .btn-lg {
+    min-width: 23rem;
+    min-height: 5rem;
     position: absolute;
     text-align: center;
-    padding: 1rem 3rem;
     font-family: 'AurulentSans-Bold', 'sans-serif';
     font-size: 2rem;
     background-color: #fff;
@@ -103,5 +110,13 @@
 
     .topic-description {
         margin-bottom: 1rem;
+    }
+
+    .follow-bottom {
+        display: block;
+    }
+
+    .follow-top {
+        display: none;
     }
 }

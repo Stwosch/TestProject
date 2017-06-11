@@ -35,6 +35,11 @@ main {
     color: #A7A9AC;
 }
 
+@media (max-width: 1200px) {
+    main {
+        width: 100%;
+    }
+}
 
 @media (max-width: 470px) {
 

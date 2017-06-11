@@ -37,6 +37,12 @@ main {
     margin-bottom: 2rem;
 }
 
+@media (max-width: 1200px) {
+    main {
+        width: 100%;
+    }
+}
+
 @media (max-width: 560px) {
     .question-activity-time {
         display: none;
